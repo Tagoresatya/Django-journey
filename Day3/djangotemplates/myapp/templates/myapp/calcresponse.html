@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Result</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+
+<body>
+        
+        {% include 'myapp/nav.html' %}
+        <h1>Hi {{ name }}</h1>
+
+        {% if operation == "add" %}
+        <h1>Addition of {{ a }} and {{ b }} is {{ c }}</h1>
+        {% endif %}
+
+        {% if operation == "sub" %}
+        <h1>Subtraction of {{ a }} and {{ b }} is {{ c }}</h1>
+        {% endif %}
+
+        {% if operation == "mul" %}
+        <h1>Multiply of {{ a }} and {{ b }} is {{ c }}</h1>
+        {% endif %}
+
+        {% if operation == "div" %}
+        <h1>Division of {{ a }} and {{ b }} is {{ c  }}</h1>
+        {% endif %}
+
+    </body>
+</html>

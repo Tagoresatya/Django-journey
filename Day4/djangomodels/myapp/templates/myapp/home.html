@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <head>
+        {% include 'myapp/nav.html' %}
+        <title>Student Management</title>
+        <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+    </head>
+    <body>
+        <!-- <a href="{% url 'student_create' %}">Create Student</a>
+        <a href="{% url 'student_update' %}">Update Student</a> -->
+        
+        <h1>All students</h1>
+        {% for s in students %}
+        <h3>{{ s.id }} . Name: {{ s.name }} | Age: {{ s.age }} | Roll No: {{ s.rollno }}</h3>
+        {% endfor %}    
+    </body>
+</html>
